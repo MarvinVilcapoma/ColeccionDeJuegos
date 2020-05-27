@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
-    var juegos : [Juego] = []
+    var juegos : [Juego] = [] 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         
