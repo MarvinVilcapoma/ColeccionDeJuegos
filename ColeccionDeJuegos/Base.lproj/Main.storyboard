@@ -13,20 +13,35 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColeccionDeJuegos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="ColeccionDeJuegos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K6j-GH-9Ft">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K6j-GH-9Ft" secondAttribute="trailing" id="Jv4-yP-QOQ"/>
+                            <constraint firstItem="K6j-GH-9Ft" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ej4-Gl-5os"/>
+                            <constraint firstItem="K6j-GH-9Ft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h0m-43-grw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K6j-GH-9Ft" secondAttribute="bottom" id="kAJ-I3-2AH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="rss-n5-4E8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="axw-G7-y6p">
                             <connections>
-                                <segue destination="mL0-1e-yCT" kind="show" id="YpJ-DI-09v"/>
+                                <segue destination="mL0-1e-yCT" kind="show" identifier="juegoSegue" id="YpJ-DI-09v"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="K6j-GH-9Ft" id="2gT-A8-QH1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,6 +74,14 @@
                                 <rect key="frame" x="67" y="151" width="280" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsd-ta-WWK">
+                                <rect key="frame" x="160" y="463" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Eliminar"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="mL0-1e-yCT" eventType="touchUpInside" id="WEc-jz-Cu5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2jQ-m7-uAa"/>
@@ -79,12 +102,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="JuegoImageView" destination="kGK-UH-5hL" id="Y2I-ex-HK0"/>
+                        <outlet property="agregarActualizarBoton" destination="l9M-uL-rsn" id="TGp-Xx-dtk"/>
+                        <outlet property="eliminarBoton" destination="fsd-ta-WWK" id="Agg-Qs-q70"/>
                         <outlet property="tituloTextField" destination="uoZ-8d-w11" id="miQ-uM-Pps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IlQ-FP-QP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888.8" y="133.74384236453201"/>
+            <point key="canvasLocation" x="1888.4057971014495" y="133.69565217391306"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bty-vu-bvJ">
