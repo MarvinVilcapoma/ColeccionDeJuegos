@@ -55,13 +55,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGK-UH-5hL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGK-UH-5hL">
                                 <rect key="frame" x="67" y="151" width="280" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="1uq-0x-p31"/>
-                                    <constraint firstAttribute="width" constant="280" id="cs6-Ez-VlJ"/>
-                                    <constraint firstAttribute="height" constant="150" id="kFW-sq-BUe"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
